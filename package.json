@@ -1,0 +1,31 @@
+{
+  "name": "npm1-swarm-js",
+  "version": "0.1.21",
+  "description": "Swarm tools for JavaScript.",
+  "main": "lib/swarm.js",
+  "scripts": {
+    "bundle": "browserify -d lib/swarm.js > examples/example_dapp_uploader/swarm.min.js",
+    "minify": "ccjs examples/example_dapp_uploader/swarm.min.js > examples/example_dapp_uploader/swarm.min.js_; mv examples/example_dapp_uploader/swarm.min.js_ examples/example_dapp_uploader/swarm.min.js",
+    "build": "npm run bundle; npm run minify",
+    "babel": "babel src --out-dir=lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MaiaVictor",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^5.0.5",
+    "decompress": "^4.0.0",
+    "fs-extra": "^2.1.2",
+    "fs-promise": "^2.0.0",
+    "mimetype": "0.0.8",
+    "mkdirp-promise": "^5.0.1",
+    "mock-fs": "^4.1.0",
+    "setimmediate": "^1.0.5",
+    "tar.gz": "^1.0.5",
+    "xhr-request-promise": "^0.1.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-cli": "^6.24.1"
+  }
+}
